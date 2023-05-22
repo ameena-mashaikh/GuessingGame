@@ -6,11 +6,21 @@ Console.WriteLine("Guess the Secret Number");
 string userInp = Console.ReadLine();
 int parsedInt = int.Parse(userInp);
 int secretNum = 42;
-if (parsedInt == secretNum)
+
+int i = 1;
+while (i <= 3)
 {
-    Console.WriteLine("Success! You guessed the Secret Number");
-}
-else
-{
-    Console.WriteLine("Sadly you guessed the wrong number");
+
+    if (parsedInt == secretNum)
+    {
+        Console.WriteLine("Success! You guessed the Secret Number");
+        break;
+    }
+    else
+    {
+        Console.WriteLine("Incorrect, guess again!");
+        userInp = Console.ReadLine();
+        parsedInt = int.Parse(userInp);
+        i++;
+    }
 }
