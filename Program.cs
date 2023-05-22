@@ -13,12 +13,12 @@ while (i <= 3)
 
     if (parsedInt == secretNum)
     {
-        Console.WriteLine("Success! You guessed the Secret Number");
+        Console.WriteLine($@"Success! Your guess, {userInp}, is the Secret Number!");
         break;
     }
     else
     {
-        Console.WriteLine("Incorrect, guess again!");
+        Console.WriteLine($@"Your Previous Guess, {userInp}, is incorrect. Guess again!");
         userInp = Console.ReadLine();
         parsedInt = int.Parse(userInp);
         i++;
